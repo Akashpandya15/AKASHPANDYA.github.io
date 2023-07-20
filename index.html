@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header and Navbar -->
+    <section class="header" id="head">
+      <nav>
+        <a href="index.html"><img src="./images/logo.png" alt="" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="#head">HOME</a></li>
+            <li><a href="#who_iam">INTRODUCTION</a></li>
+            <li><a href="#created_websites">PROJECTS</a></li>
+            <li><a href="">CV</a></li>
+            <li><a href="#hire_me">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <div class="text-box">
+        <h1>
+          Hi, I am Akash Pandya <br />
+          I <span> Researcher </span>
+        </h1>
+        <div class="buttons">
+          <a href="#hire_me" class="hire_me">HIRE ME</a>
+          <a href="" class="Get_CV">GET CV</a>
+        </div>
+      </div>
+    </section>
+    <!-- Experience, Qualification and Skills -->
+    <section class="intro" id="who_iam">
+      <h1>Skills</h1>
+      <p>Below are a list of my qualifications and skills</p>
+      <div class="row">
+        <div class="skill-col">
+          <h3>Designing Software</h3>
+          <p>
+           Solidworks
+            Autocade fusion360
+            VIEW
+          </p>
+        </div>
+        <div class="skill-col">
+          <h3>analysis software</h3>
+          <p>
+            ABAQUAS
+            ANSYS
+          </p>
+        </div>
+        <div class="skill-col">
+          <h3>language</h3>
+          <p>
+            MATLAB
+            C/C++
+            Ladder Logic
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="skill-col">
+          <h3>BOOTSTRAP</h3>
+          <p>
+            I have made use of BOOTSTRAP to create several of my front-end based projects. It is a free, open source HTML, CSS, and JavaScript framework for
+            quickly building responsive websites.
+          </p>
+        </div>
+        <div class="skill-col">
+          <h3>RESPONSIVE DESIGN</h3>
+          <p>
+            As more diverse screen sizes became available, the concept of responsive web design (RWD) appeared, a set of practices that allows web pages to
+            alter their layout and appearance to suit different screen widths, resolutions, etc. This is a concept that I base all my projects around so that I
+            can maximize user comfort and experience.
+          </p>
+        </div>
+        <div class="skill-col">
+          <h3>REACT JS</h3>
+          <p>
+            React is a library for building user interfaces. React is not a framework, it's not even exclusive to the web. It's used with other libraries to
+            render to certain environments. For instance, React Native can be used to build mobile applications. I have been learning React for the last 6 or so
+            months and have achieved tremendous results.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- pROJECTS -->
+    <section class="projects" id="created_websites">
+      <h1>PROJECTS</h1>
+      <p>Check out some of my projects to see what I am capable of!</p>
+      <div class="row">
+        <div class="project-col">
+          <img src="./images/image1.jpg" alt="" />
+          <div class="layer">
+            <a href="https://akashpandya.net"><h3>Project 1(Blog)</h3></a>
+          </div>
+        </div>
+        <div class="project-col">
+          <img src="./images/image2.jpg" alt="" />
+          <div class="layer">
+            <a href="https://anuelectronics.net"><h3>Project 2(DJ Commision)</h3></a>
+          </div>
+        </div>
+        <div class="project-col">
+          <img src="./images/image3.jpg" alt="" />
+          <div class="layer">
+            <a href="./project3.html"><h3>Project 3(Restaurant Commision W.I.P)</h3></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="hire_me">
+      <h1 class="form_header">Get in Touch</h1>
+      <p>Want to hire me? Have a question? Or just want to have a chat?</p>
+      <form id="my-form" action="https://formspree.io/f/xeqnowgw" method="POST">
+        <label>Name:</label>
+        <input type="text" name="name" class="grid-item" />
+        <label>Email:</label>
+        <input type="email" name="email" class="grid-item" />
+        <label>Message:</label>
+        <textarea type="text" name="message" class="grid-item"></textarea>
+        <button id="my-form-button" class="btn">Submit</button>
+        <p id="my-form-status"></p>
+      </form>
+    </section>
+    <section class="footer">
+      <p class="copyright">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, assumenda!</p>
+      <div class="icons">
+        <a href="https://github.com/akashpandya" class="icon"><img src="./images/github.png" alt="" /></a>
+        <a href="" class="icon"><img src="./images/twitter.png" alt="" /></a>
+        <a href="https://www.facebook.com/akash.pandya.12" class="icon"><img src="./images/facebook-app-symbol.png" alt="" /></a>
+        <a href="https://www.linkedin.com/in/akash-pandya100/" class="icon"><img src="./images/linkedin.png" alt="" /></a>
+      </div>
+    </section>
+
+    <!-- Javascript for Toggle Menu -->
+    <script>
+      var navlinks = document.getElementById("navLinks");
+      function showMenu() {
+        navlinks.style.right = "0";
+      }
+      function hideMenu() {
+        navlinks.style.right = "-200px";
+      }
+    </script>
+    <script>
+      var form = document.getElementById("my-form");
+
+      async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            status.innerHTML = "Thanks for your submission!";
+            form.reset();
+          })
+          .catch((error) => {
+            status.innerHTML = "Oops! There was a problem submitting your form";
+          });
+      }
+      form.addEventListener("submit", handleSubmit);
+    </script>
+  </body>
+</html>
